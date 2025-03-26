@@ -31,3 +31,9 @@ describe( "index.js", () => {
     } )
   } )
 })
+global.fetch = jest.fn(() =>
+  Promise.resolve({
+      json: () => Promise.resolve([{ name: "Game of Thrones" }])
+  })
+);
+
